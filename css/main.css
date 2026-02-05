@@ -4275,6 +4275,31 @@ form textarea:required:valid {
   }
 }
 
+/* ===============================
+   Portfolio responsive visibility
+   =============================== */
+
+/* Mobile + Tablet: show only first 4 items */
+@media (max-width: 991.98px) {
+  .portfolio-item:nth-child(n+5) {
+    display: none !important;
+  }
+}
+
+/* Desktop/Web: show first 6 items */
+@media (min-width: 992px) {
+  .portfolio-item:nth-child(n+7) {
+    display: none !important;
+  }
+}
+
+/* Push portfolio tag buttons a bit lower (inside the caption overlay) */
+#portfolio .gallery__descr .card__tags {
+  margin-top: 14px !important;
+}
+
+
+
 /* ------------------------------------------------*/
 /* Features Socials End */
 /* ------------------------------------------------*/
