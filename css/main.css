@@ -4298,8 +4298,122 @@ form textarea:required:valid {
   margin-top: 14px !important;
 }
 
+.whatsapp-float {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 50px;
+  height: 50px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  z-index: 9999;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float svg {
+  width: 26px;
+  height: 26px;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+}
+
+/* 📱 Mobile version */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    right: 16px;
+    bottom: 16px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .whatsapp-float svg {
+    width: 22px;
+    height: 22px;
+  }
+}
 
 
 /* ------------------------------------------------*/
 /* Features Socials End */
 /* ------------------------------------------------*/
+
+
+.cards__list{
+    margin:28px 0 0;
+    padding-left:22px;
+    list-style:disc;
+}
+
+.cards__list li{
+    margin-bottom:12px;
+    color:rgba(255,255,255,.82);
+    line-height:1.7;
+    font-size:15px;
+}
+
+.cards__list li::marker{
+    color:#C8A6FF;
+    font-size:16px;
+}
+
+.cards__descr{
+    flex: 1;
+}
+
+/* ===========================
+   Services Cards - Auto Height
+   =========================== */
+
+.cards__item{
+    height:auto !important;
+}
+
+@media only screen and (min-width:1400px){
+    .cards__item{
+        height:auto !important;
+    }
+}
+
+.cards__card{
+    height:100%;
+    display:flex;
+    flex-direction:column;
+}
+
+.cards__descr{
+    padding:3rem;
+}
+
+@media only screen and (min-width:1400px){
+    .cards__descr{
+        padding:5rem;
+    }
+}
+
+/* ==========================================
+   Contact Section - Reduce Social Icons Gap
+   ========================================== */
+
+.socials-cards{
+    margin-bottom: 0 !important;
+}
+
+.socials-cards__item{
+    margin-bottom: 0 !important;
+}
+
+.content__block.grid-block{
+    margin-bottom: 30px !important;
+}
+
+.teaser{
+    margin-top: 0 !important;
+}
+
