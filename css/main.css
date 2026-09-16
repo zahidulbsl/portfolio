@@ -6273,3 +6273,43 @@ body::-webkit-scrollbar,
   }
 }
 
+/* =========================================
+   TESTIMONIAL COUNTER — HORIZONTAL
+========================================= */
+
+.testimonials-pagination.swiper-pagination {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+
+  width: auto !important;
+  min-width: 55px !important;
+
+  white-space: nowrap !important;
+
+  line-height: 1 !important;
+}
+
+.testimonials-pagination .swiper-pagination-current,
+.testimonials-pagination .swiper-pagination-total {
+  display: inline-block !important;
+  width: auto !important;
+  height: auto !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  line-height: 1 !important;
+}
+
+.testimonials-pagination .swiper-pagination-current {
+  color: #eee9ef;
+  font-weight: 600;
+}
+
+.testimonials-pagination .swiper-pagination-total {
+  color: #77727b;
+  font-weight: 500;
+}
+
