@@ -6440,3 +6440,53 @@ body::-webkit-scrollbar,
     white-space: nowrap !important;
   }
 }
+
+/* =========================================
+   TESTIMONIALS — LIGHT MODE
+========================================= */
+
+html[color-scheme="light"] .testimonial-theme-safe .premium-testimonial__platform {
+  color: #403b46 !important;
+}
+
+html[color-scheme="light"] .testimonial-theme-safe .premium-testimonial__rating,
+html[color-scheme="light"] .testimonial-theme-safe .premium-testimonial__rating i {
+  color: #29262f !important;
+}
+
+html[color-scheme="light"] .testimonial-theme-safe .premium-testimonial__text p {
+  color: #29262f !important;
+}
+
+html[color-scheme="light"] .testimonial-theme-safe .premium-testimonial__name {
+  color: #29262f !important;
+}
+
+html[color-scheme="light"] .testimonial-theme-safe .premium-testimonial__location {
+  color: #5f5a66 !important;
+}
+
+html[color-scheme="light"] .testimonial-theme-safe .premium-testimonial__service {
+  color: #5f5a66 !important;
+}
+
+html[color-scheme="light"] .testimonial-theme-safe .premium-testimonial__avatar {
+  color: #29262f !important;
+  background: rgba(0, 0, 0, 0.06) !important;
+}
+
+html[color-scheme="light"] .testimonial-theme-safe .premium-testimonial__quote {
+  color: #29262f !important;
+}
+
+/* =========================================
+   MOBILE — REDUCE BACKGROUND GRADIENT
+========================================= */
+
+@media only screen and (max-width: 767px) {
+
+  .gradient-background {
+    opacity: 0.35 !important;
+  }
+
+}
