@@ -284,20 +284,26 @@ $(function() {
     });
   };
 
-  if (!testimonialsSlider) {
-    const swiper = new Swiper('.swiper-testimonials', {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      autoplay: true,
-      speed: 1000,
-      loop: true,
-      loopFillGroupWithBlank: true,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-  };
+ if (!testimonialsSlider) {
+  const swiper = new Swiper('.swiper-testimonials', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    autoplay: true,
+    speed: 1000,
+    loop: true,
+    loopFillGroupWithBlank: true,
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    pagination: {
+      el: '.testimonials-pagination',
+      type: 'fraction',
+    },
+  });
+};
   // --------------------------------------------- //
   // Swiper Slider Start
   // --------------------------------------------- //
