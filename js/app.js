@@ -440,3 +440,24 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
+/* =========================================
+   Navigation Active Box
+   ========================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuLinks = document.querySelectorAll(".menu__link");
+
+  menuLinks.forEach(function (link) {
+    link.addEventListener("click", function () {
+
+      // Remove active box from all menu items
+      menuLinks.forEach(function (item) {
+        item.classList.remove("active");
+      });
+
+      // Move active box to clicked menu item
+      this.classList.add("active");
+
+    });
+  });
+});

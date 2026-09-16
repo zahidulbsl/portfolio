@@ -5880,14 +5880,18 @@ body::-webkit-scrollbar,
 }
 
 
-/* WhatsApp icon - Let's Talk CTA */
-#notify-trigger .ph-whatsapp-logo {
+/* Message icon */
+#notify-trigger .ph-chat-circle {
   display: inline-flex !important;
-  align-items: center;
-  justify-content: center;
-  margin-left: 10px !important;
-  font-size: 22px !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  font-size: 28px !important;
   line-height: 1 !important;
+
   flex-shrink: 0;
 }
 
@@ -5989,16 +5993,18 @@ body::-webkit-scrollbar,
   margin-left: 0;
   margin-right: auto;
   padding: 34px 36px 30px !important;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(0, 0, 0, 0.35) !important;
   border-radius: 20px;
+
   background:
     linear-gradient(
       145deg,
-      rgba(255,255,255,0.045),
-      rgba(255,255,255,0.018)
+      rgba(255, 255, 255, 0.045),
+      rgba(255, 255, 255, 0.018)
     );
-  box-shadow:
-    0 20px 60px rgba(0,0,0,0.18);
+
+  box-shadow: none !important;
 }
 
 .premium-testimonial::before {
@@ -6033,9 +6039,9 @@ body::-webkit-scrollbar,
   gap: 7px;
   padding: 7px 11px;
   border-radius: 8px;
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   color: #aaa5af;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.01em;
 }
@@ -6050,12 +6056,12 @@ body::-webkit-scrollbar,
   align-items: center;
   gap: 6px;
   color: #d8d3dc;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
 }
 
 .premium-testimonial__rating i {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .premium-testimonial__quote {
@@ -6091,7 +6097,7 @@ body::-webkit-scrollbar,
   justify-content: space-between;
   gap: 20px;
   padding-top: 22px;
-  border-top: 1px solid rgba(255,255,255,0.07);
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
 }
 
 .premium-testimonial__client {
@@ -6107,7 +6113,7 @@ body::-webkit-scrollbar,
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
   color: #ddd8e0;
   font-size: 15px;
   font-weight: 600;
@@ -6116,20 +6122,53 @@ body::-webkit-scrollbar,
 .premium-testimonial__name {
   margin: 0 0 3px;
   color: #eee9ef;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
 }
 
 .premium-testimonial__location {
   margin: 0;
   color: #88838d;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .premium-testimonial__service {
   color: #928d96;
-  font-size: 12px;
+  font-size: 16px;
   text-align: right;
+}
+
+
+/* =========================================
+   Review Pagination
+   ========================================= */
+
+.testimonials-pagination.swiper-pagination {
+  position: absolute !important;
+  left: 900px !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: 30px !important;
+
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+
+  transform: translateX(-100%) !important;
+
+  color: #aaa5af;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+.testimonials-pagination .swiper-pagination-current {
+  color: #eee9ef;
+  font-weight: 600;
+}
+
+.testimonials-pagination .swiper-pagination-total {
+  color: #77727b;
 }
 
 
@@ -6160,6 +6199,10 @@ body::-webkit-scrollbar,
     font-size: 13px;
   }
 
+  .premium-testimonial__rating i {
+    font-size: 16px;
+  }
+
   .premium-testimonial__quote {
     top: 62px;
     right: 22px;
@@ -6184,52 +6227,49 @@ body::-webkit-scrollbar,
   .premium-testimonial__service {
     text-align: left;
   }
-}
 
-/* Make testimonial details more prominent */
-
-.premium-testimonial__platform {
-  font-size: 14px;
-}
-
-.premium-testimonial__name {
-  font-size: 16px;
-}
-
-.premium-testimonial__location {
-  font-size: 13px;
-}
-
-.premium-testimonial__service {
-  font-size: 16px;
-}
-
-.premium-testimonial__rating {
-  font-size: 16px;
-}
-
-.premium-testimonial__rating i {
-  font-size: 18px;
-}
-
-.testimonials-pagination.swiper-pagination {
-  position: absolute !important;
-  left: 900px !important;
-  right: auto !important;
-  bottom: 0 !important;
-  width: auto !important;
-  margin: 0 !important;
-  transform: translateX(-100%) !important;
-  color: #aaa5af;
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-}
-
-@media (max-width: 767px) {
   .testimonials-pagination.swiper-pagination {
     left: auto !important;
     right: 0 !important;
+    bottom: 30px !important;
     transform: none !important;
   }
 }
+
+/* =========================================
+   FINAL CTA — REMOVE OUTER BG
+   Keep original hover animation
+   ========================================= */
+
+.final-cta__button {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Keep the original animated purple layer */
+.final-cta__button::before {
+  background: linear-gradient(
+    135deg,
+    var(--accent) 0%,
+    var(--secondary) 100%
+  ) !important;
+}
+
+/* Keep original text animation */
+.final-cta__button span,
+.final-cta__button i {
+  text-shadow: 0 0 var(--t-opp-bright), 0 5rem var(--t-opp-bright);
+}
+
+/* Keep hover animation */
+@media only screen and (min-width: 1200px) {
+  .no-touch .final-cta__button:hover::before {
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  .no-touch .final-cta__button:hover span,
+  .no-touch .final-cta__button:hover i {
+    text-shadow: 0 -5rem var(--t-opp-bright), 0 0 var(--t-opp-bright);
+  }
+}
+
