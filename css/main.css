@@ -5956,3 +5956,26 @@ body::-webkit-scrollbar,
 
 }
 
+/* Trusted By Text */
+.hero-trust p {
+  font-size: 18px !important;
+  line-height: 1.5 !important;
+}
+
+.hero-trust p strong {
+  font-size: inherit !important;
+}
+
+@media (max-width: 767px) {
+  .hero-trust p {
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+  }
+
+  .hero-trust p strong {
+    font-size: inherit !important;
+  }
+}
+
+
+
