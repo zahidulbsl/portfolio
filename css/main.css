@@ -4122,7 +4122,8 @@ form textarea:required:valid {
 /* ------------------------------------------------*/
 /* ------------------------------------------------*/
 /* Features Achievements Start */
-/* ------------------------------------------------*/
+/* ------------------------------------------------ */
+
 .numblock {
   padding: 1rem 1.25rem;
   margin-right: 1rem;
@@ -4144,7 +4145,6 @@ form textarea:required:valid {
 }
 
 .numblock__descr {
-  font: normal 700 -moz-calc(var(--_size) * 0.938)/1.2 var(--_font-default);
   font: normal 700 calc(var(--_size) * 0.938)/1.2 var(--_font-default);
   color: var(--t-muted);
   margin-top: 0.375rem;
@@ -4157,67 +4157,145 @@ form textarea:required:valid {
   }
 }
 
+
+/* =========================================
+   ACHIEVEMENTS
+========================================= */
+
+.achievements {
+  gap: 1rem;
+}
+
 .achievements__item {
   width: 100%;
 }
 
 @media only screen and (min-width: 768px) {
   .achievements__item {
-    width: 33.33333334%;
+    width: 25%;
   }
 }
 
+
+/* =========================================
+   ACHIEVEMENT CARD
+========================================= */
+
 .achievements__card {
   height: 100%;
-  padding: 3rem;
+  min-height: 170px;
+  padding: 2rem 1.25rem;
+
   background-color: var(--base);
   border: 1px solid var(--stroke-elements);
+
   -moz-border-radius: var(--_radius-xl);
   border-radius: var(--_radius-xl);
+
   text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
+
+/* =========================================
+   NUMBER
+========================================= */
+
 .achievements__number {
-  font: normal 700 6rem/1 var(--_font-accent);
-  letter-spacing: -0.2rem;
+  margin: 0;
+
+  font: normal 700 4rem/1 var(--_font-accent);
+  letter-spacing: -0.1rem;
+
   font-variant-numeric: lining-nums;
+
   background: var(--t-accent);
-  background: -webkit-linear-gradient(15deg, var(--t-accent) 0%, var(--t-secondary) 80%);
+  background: -webkit-linear-gradient(15deg,
+      var(--t-accent) 0%,
+      var(--t-secondary) 80%);
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 @media only screen and (min-width: 1200px) {
   .achievements__number {
-    font-size: 7rem;
+    font-size: 4.5rem;
   }
 }
 
 @media only screen and (min-width: 1600px) {
   .achievements__number {
-    font-size: 8rem;
+    font-size: 5rem;
   }
 }
 
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
 .achievements__descr {
-  font: normal 700 1.6rem/1.2 var(--_font-default);
+  margin: 0.5rem 0 0;
+
+  font: normal 700 1.25rem/1.2 var(--_font-default);
+
   color: var(--t-bright);
-  margin-top: 0.6rem;
 }
 
 @media only screen and (min-width: 1200px) {
   .achievements__descr {
-    font-size: 1.8rem;
+    font-size: 1.35rem;
   }
 }
 
 @media only screen and (min-width: 1600px) {
   .achievements__descr {
-    font-size: 2rem;
+    font-size: 1.45rem;
   }
 }
 
-/* ------------------------------------------------*/
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media only screen and (max-width: 767px) {
+
+  .achievements {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .achievements__item {
+    width: 100%;
+  }
+
+  .achievements__card {
+    min-height: 135px;
+    padding: 1.25rem 0.75rem;
+  }
+
+  .achievements__number {
+    font-size: 3.2rem;
+    letter-spacing: -0.06rem;
+  }
+
+  .achievements__descr {
+    font-size: 1rem;
+    line-height: 1.2;
+    margin-top: 0.4rem;
+  }
+
+}
+
+
+/* ------------------------------------------------ */
 /* Features Achievements End */
 /* ------------------------------------------------*/
 /* ------------------------------------------------*/
@@ -5562,136 +5640,6 @@ section:first-of-type {
 
 .final-cta {
   width: 100%;
-  padding: 70px 0;
-}
-
-.final-cta__inner {
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-  padding: 80px 40px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 28px;
-  background:
-    radial-gradient(circle at 50% 0%,
-      rgba(173, 137, 220, 0.16),
-      transparent 55%),
-    #111012;
-}
-
-/* Badge */
-.final-cta__badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 22px;
-  padding: 9px 16px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 50px;
-  background: rgba(255, 255, 255, 0.04);
-  color: #c9c5cf;
-  font-size: 14px;
-  line-height: 1;
-}
-
-.final-cta__badge span {
-  color: #d7b1c5;
-}
-
-/* Heading */
-.final-cta h2 {
-  max-width: 850px;
-  margin: 0 auto 20px;
-  color: #eee8ed;
-  font-size: clamp(42px, 5vw, 68px);
-  line-height: 1.08;
-  letter-spacing: -0.035em;
-  font-weight: 600;
-}
-
-/* Description */
-.final-cta p {
-  max-width: 620px;
-  margin: 0 auto 32px;
-  color: #9d99a3;
-  font-size: 17px;
-  line-height: 1.6;
-}
-
-/* Button */
-.final-cta__button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  min-height: 56px;
-  padding: 0 28px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, #d9afc1, #c8b0e8);
-  color: #17151a;
-  font-size: 16px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.final-cta__button span {
-  font-size: 19px;
-}
-
-.final-cta__button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(203, 176, 224, 0.18);
-}
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 767px) {
-
-  .final-cta {
-    padding: 45px 0;
-  }
-
-  .final-cta__inner {
-    padding: 55px 22px;
-    border-radius: 22px;
-  }
-
-  .final-cta__badge {
-    margin-bottom: 18px;
-    font-size: 13px;
-  }
-
-  .final-cta h2 {
-    font-size: 36px;
-    line-height: 1.12;
-  }
-
-  .final-cta p {
-    font-size: 15px;
-    line-height: 1.55;
-    margin-bottom: 26px;
-  }
-
-  .final-cta__button {
-    width: 100%;
-    min-height: 54px;
-    padding: 0 20px;
-  }
-
-  .desktop-only {
-    display: none;
-  }
-}
-
-/* =========================================
-   FINAL CTA
-========================================= */
-
-.final-cta {
-  width: 100%;
   padding: 50px 0;
   background: transparent !important;
 }
@@ -5707,7 +5655,11 @@ section:first-of-type {
   background: transparent !important;
 }
 
-/* Subtle purple glow */
+
+/* =========================================
+   SUBTLE PURPLE GLOW
+========================================= */
+
 .final-cta__inner::before {
   content: "";
   position: absolute;
@@ -5718,15 +5670,17 @@ section:first-of-type {
   width: 700px;
   height: 400px;
 
-  background: radial-gradient(circle,
-      rgba(170, 135, 210, 0.10),
-      transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(170, 135, 210, 0.10),
+    transparent 70%
+  );
 
   pointer-events: none;
   z-index: 0;
 }
 
-.final-cta__inner>* {
+.final-cta__inner > * {
   position: relative;
   z-index: 1;
 }
@@ -5753,14 +5707,17 @@ section:first-of-type {
    DESCRIPTION
 ========================================= */
 
-.final-cta p {
+.final-cta__description {
   max-width: 620px;
   margin: 0 auto 32px;
 
   color: #9d99a3;
 
+  font-family: var(--_font-default) !important;
   font-size: 17px;
+  font-weight: 400;
   line-height: 1.6;
+  letter-spacing: 0;
 }
 
 
@@ -5779,9 +5736,11 @@ section:first-of-type {
 
   border-radius: 14px;
 
-  background: linear-gradient(135deg,
-      #d9afc1,
-      #c8b0e8);
+  background: linear-gradient(
+    135deg,
+    #d9afc1,
+    #c8b0e8
+  );
 
   color: #17151a;
   font-size: 16px;
@@ -5818,9 +5777,10 @@ section:first-of-type {
     margin-bottom: 0 !important;
   }
 
-  section+section {
+  section + section {
     padding-top: 25px !important;
   }
+
 
   /* Final CTA */
   .final-cta {
@@ -5838,21 +5798,38 @@ section:first-of-type {
     top: -120px;
   }
 
+
+  /* Heading */
   .final-cta h2 {
     font-size: 36px;
     line-height: 1.12;
   }
 
-  .final-cta p {
-    font-size: 15px;
-    line-height: 1.55;
+
+  /* Description */
+  .final-cta__description {
+    max-width: 100%;
     margin-bottom: 26px;
+
+    font-family: var(--_font-default) !important;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.55;
+    letter-spacing: 0;
   }
 
+
+  /* Button */
   .final-cta__button {
     min-height: 54px;
     padding: 0 22px;
     width: auto;
+
+    margin-bottom: 60px !important;
+  }
+
+  .final-cta__button span {
+    font-size: 17px;
   }
 
   .desktop-only {
@@ -5860,3 +5837,122 @@ section:first-of-type {
   }
 
 }
+
+/* =========================================
+   MOBILE HORIZONTAL OVERFLOW FIX
+========================================= */
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden !important;
+}
+
+.main {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 767px) {
+  section {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+/* =========================================
+    HIDE ALL SCROLLBARS
+ ========================================= */
+
+html,
+body,
+* {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+
+/* WhatsApp icon - Let's Talk CTA */
+#notify-trigger .ph-whatsapp-logo {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px !important;
+  font-size: 22px !important;
+  line-height: 1 !important;
+  flex-shrink: 0;
+}
+
+/* =========================================
+   PROFILE CARD - CTA SPACING
+========================================= */
+
+.avatar__btnholder {
+  margin-top: 20px !important;
+}
+
+/* =========================================
+   FINAL CTA DESCRIPTION — FINAL OVERRIDE
+========================================= */
+
+.final-cta p.final-cta__description {
+  max-width: 620px;
+  margin: 0 auto 32px;
+
+  color: #9d99a3 !important;
+
+  font-family: var(--_font-default) !important;
+  font-size: 17px !important;
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
+  letter-spacing: 0 !important;
+}
+
+
+/* Mobile */
+@media (max-width: 767px) {
+
+  .final-cta p.final-cta__description {
+    max-width: 100%;
+
+    font-family: var(--_font-default) !important;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    line-height: 1.55 !important;
+    letter-spacing: 0 !important;
+
+    margin: 0 auto 26px;
+  }
+
+}
+
+/* =========================================
+   FINAL CTA DESCRIPTION — WIDTH ONLY
+========================================= */
+
+#final-cta .zahidul-final-description {
+  width: 760px !important;
+  max-width: calc(100% - 100px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+
+/* Mobile */
+@media (max-width: 767px) {
+
+  #final-cta .zahidul-final-description {
+    width: calc(100% - 30px) !important;
+    max-width: none !important;
+  }
+
+}
+
