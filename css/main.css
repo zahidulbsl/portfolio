@@ -6313,3 +6313,130 @@ body::-webkit-scrollbar,
   font-weight: 500;
 }
 
+/* =========================================
+   TESTIMONIAL — MOBILE FINAL
+========================================= */
+
+@media only screen and (max-width: 767px) {
+
+  /* Slider space */
+  .swiper-testimonials {
+    padding-bottom: 6rem !important;
+  }
+
+  /* Card */
+  .premium-testimonial {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    padding: 24px 20px 20px !important;
+
+    border-radius: 16px !important;
+  }
+
+  /* Top row */
+  .premium-testimonial__top {
+    margin-bottom: 24px !important;
+  }
+
+  .premium-testimonial__platform {
+    font-size: 11px !important;
+    padding: 6px 9px !important;
+  }
+
+  .premium-testimonial__rating {
+    font-size: 13px !important;
+  }
+
+  .premium-testimonial__rating i {
+    font-size: 15px !important;
+  }
+
+  /* Quote */
+  .premium-testimonial__quote {
+    top: 60px !important;
+    right: 20px !important;
+    font-size: 46px !important;
+  }
+
+  /* Review text */
+  .premium-testimonial__text {
+    max-width: 100% !important;
+    margin-bottom: 24px !important;
+  }
+
+  .premium-testimonial__text p {
+    font-size: 16px !important;
+    line-height: 1.55 !important;
+  }
+
+  /* Footer */
+  .premium-testimonial__footer {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    flex-direction: row !important;
+
+    gap: 12px !important;
+
+    padding-top: 18px !important;
+  }
+
+  /* Client */
+  .premium-testimonial__client {
+    flex-shrink: 0;
+    gap: 10px !important;
+  }
+
+  .premium-testimonial__avatar {
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 14px !important;
+  }
+
+  .premium-testimonial__name {
+    font-size: 14px !important;
+  }
+
+  .premium-testimonial__location {
+    font-size: 11px !important;
+  }
+
+  /* Service */
+  .premium-testimonial__service {
+    max-width: 45% !important;
+
+    font-size: 11px !important;
+    line-height: 1.4 !important;
+
+    text-align: right !important;
+  }
+
+  /* Navigation buttons */
+  .mxd-slider-btn-square {
+    width: 52px !important;
+    height: 52px !important;
+  }
+
+  .mxd-slider-btn-square-next {
+    left: 62px !important;
+  }
+
+  /* Counter */
+  .testimonials-pagination.swiper-pagination {
+    right: 0 !important;
+    bottom: 18px !important;
+
+    font-size: 13px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: auto !important;
+    min-width: 48px !important;
+
+    white-space: nowrap !important;
+  }
+}
